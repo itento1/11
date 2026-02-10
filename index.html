@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио | Нагуш Степан</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-bg"></div>
+
+    <header>
+        <div class="container header-content">
+            <div class="profile-group">
+                <div class="avatar-container">
+                    <img src="i.jpg" alt="Нагуш Степан" class="avatar">
+                    <div class="status-dot"></div>
+                </div>
+                <div class="header-info">
+                    <h1>Нагуш Степан</h1>
+                    <span class="badge">Студент</span>
+                </div>
+            </div>
+            <nav>
+                <a href="#about">Обо мне</a>
+                <a href="#skills">Навыки</a>
+                <a href="#contacts">Контакты</a>
+                <button id="theme-toggle" class="theme-btn">
+                    <span class="sun-icon">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="about" class="main-card">
+            <div class="card-header">
+                <span class="icon">👤</span>
+                <h2>Личная информация</h2>
+            </div>
+            <div class="card-body">
+                <p><strong>Цель:</strong> Освоить современные технологии программирования и веб-разработки.</p>
+                <p>Я студент, учусь в <strong>TORAIGHYROV UNIVERSITY</strong> на специальности "Computer Science" в городе <strong>Павлодар</strong>.</p>
+                <p>На данный момент активно изучаю языки программирования и веб разработку.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="main-card">
+            <div class="card-header">
+                <span class="icon">⚡</span>
+                <h2>Мои навыки</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-tag cpp">C++ (Обучаюсь)</div>
+                <div class="skill-tag html">HTML5</div>
+                <div class="skill-tag css">CSS3</div>
+                <div class="skill-tag git">Git / GitHub</div>
+            </div>
+        </section>
+
+        <section id="contacts" class="main-card">
+            <div class="card-header">
+                <span class="icon">✉️</span>
+                <h2>Контакты</h2>
+            </div>
+            <div class="contact-grid">
+                <a href="mailto:7upstepan@mail.ru" class="contact-item">
+                    <span class="label">Email</span>
+                    <span class="value">7upstepan@mail.ru</span>
+                </a>
+                <a href="https://t.me/Itento1" target="_blank" class="contact-item">
+                    <span class="label">Telegram</span>
+                    <span class="value">@Itento1</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Практическая работа №1 по дисциплине «Веб технологии»</p>
+            <p>2026 год</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', body.classList.contains('dark-theme') ? 'dark' : 'light');
+        });
+        if (localStorage.getItem('theme') === 'dark') body.classList.add('dark-theme');
+    </script>
+</body>
+</html>
